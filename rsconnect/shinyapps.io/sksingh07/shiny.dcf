@@ -1,0 +1,13 @@
+name: shiny
+title: shiny
+username:
+account: sksingh07
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 224101
+bundleId: 1021473
+url: https://sksingh07.shinyapps.io/shiny/
+when: 1507732203.33512
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: helper.R
