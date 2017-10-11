@@ -15,7 +15,8 @@ shinyServer(function(input, output,session) {
                         theme(legend.position = "right") + 
                         scale_x_continuous(limits = c(0,30))+
                         ggtitle("Distribution Trip Length for The Two Vendors")+
-                        theme_light()
+                        theme_light()+
+                        theme(legend.position="bottom")
                         
         })
         
@@ -31,12 +32,21 @@ shinyServer(function(input, output,session) {
                 
         })
         
+        output$vend  <- renderPlot({
+                compid %>% group_by(vendor_id) %>% 
+                        ggplot(aes(pickup_longitude,pickup_latitude)) +
+                        geom_point(aes(color = trip_duration)) + 
+                        scale_color_gradient(low ="yellow", high = "black") +
+                        facet_grid(. ~ vendor_id)
+                
+        })
         output$vid_dist  <- renderPlot({
                 ggplot(data = compid, aes(group = vendor_id, x= vendor_id, y = trip_duration)) + 
                         geom_violin() +
                         geom_boxplot(aes(fill = vendor_id)) + 
                         facet_grid(. ~ vendor_id) + scale_y_log10()+
-                        theme_light()
+                        theme_light()+ ggtitle("Boxplot of Trip Duration for the Two Vendors")+
+                        theme(legend.position="bottom")
                 
         })
         
