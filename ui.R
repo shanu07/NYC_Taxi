@@ -7,11 +7,11 @@ shinyUI(dashboardPage(
                 sidebarMenu(
                         sidebarMenuOutput("whatever"),
                         menuItem("Introduction", tabName = "markdown"),
-                        menuItem("Map", tabName = "map", icon = icon("map")),
                         menuItem("Plots", tabName = "plots"),
                         menuItem("Distance v/s Time", tabName = "dist_time"),
                         menuItem("Time and Frequency", tabName = "time_freq"),
                         menuItem("Frequency and Azimuth", tabName = "rose"),
+                        menuItem("Map", tabName = "map", icon = icon("map")),
                         menuItem("T-Test Result", tabName = "T-test"),
                         menuItem("Data", tabName = "data", icon = icon("database")),
                         selectizeInput("selected",
