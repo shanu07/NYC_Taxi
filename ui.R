@@ -67,7 +67,7 @@ shinyUI(dashboardPage(
                                         ))),
 
                         tabItem(tabName = "T-test", h1(img(src="2Sample_ttest.png", height = 400, width = 800)),
-                                h3(class = 'text-muted','Data shows that: THERE IS A NOT ENOUGH EVIDENCE THAT THERE IS A SIGNIFICANT DIFFERENCE BETWEEN THE DRIVE TIMES OF THE TWO VENDORS.'
+                                h3(class = 'text-muted','Data shows that: THERE IS A NOT ENOUGH EVIDENCE THAT THE DRIVE TIMES OF THE TWO VENDORS IS SIMILAR.'
                                 ),
                                 p(class = "text-muted",paste(""))
                                 ),
